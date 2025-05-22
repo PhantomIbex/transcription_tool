@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/main.css">
+    <title>SB Naval Transcription Tool</title>
+	 
+	
+</head>
+	
+<body>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Transcription Tool</a>
+    </div>
+    <div class="form-group">
+		<button id="slw" type="button" class="btn btn-dark btn-sm">-</button>
+		<input id="speed" type="range" class="btn btn-dark btn-sm" min="1" max="3" value="2">
+		<button id="fst" type="button" class="btn btn-dark btn-sm">+</button>
+		
+		
+		<audio id="audio" controls >
+			<source src="audio/trans.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button id="rew" type="button" class="btn btn-dark btn-sm" onclick="rewind()">&lt;&lt;</button>
+		<button id="for" type="button" class="btn btn-dark btn-sm" onclick="forward()">&gt;&gt;</button>
+		<button id="newSRC" type="button" class="btn btn-dark btn-sm">Change Audio Source</button>
+			
+	</div>
+  </div>
+</nav>
+	
+
+	<br>
+<div id="myText" align="center">
+
+<textarea id="text" class="text" autofocus rows="25" cols="180" onmouseenter="count()" onkeyup='saveValue(this);'>
+</textarea>
+</div>
+
+<div id="controlbuttons" align="left">
+	<button id="playButton" type="button" class="btn btn-dark btn-sm" onclick="play()">Esc</button>
+	<button id="rewindButton" type="button" class="btn btn-dark btn-sm" onclick="rewind()">F1</button>
+	<button id="forwardButton" type="button" class="btn btn-dark btn-sm" onclick="forward()">F2</button>
+</div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/shortcut.js"></script>
+<script src="js/main.js"></script>
+<script src="js/text.js"></script>
+
+</body>
+</html>
