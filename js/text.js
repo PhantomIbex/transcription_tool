@@ -8,7 +8,7 @@ function saveValue(e){
 
 function getSavedValue (v){
 	if (!localStorage.getItem(v)) {
-		return "Hello Gwapa!";
+		return "";
 	}
 	return localStorage.getItem(v);
 }
